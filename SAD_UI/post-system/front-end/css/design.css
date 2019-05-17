@@ -1,0 +1,71 @@
+body {
+  font-family: "Dosis",sans-serif; 
+}
+.image-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  border-radius: 15px;
+  transition: .5s;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.module-receipt {
+  background: url("../img/receip.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+}
+.module-customer {
+  background: url("../img/customer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+
+.box h1 {
+  font-weight: 600;
+  font-size: 28px;
+  color: #E4F20A;
+  margin: 10px;
+  justify-content: flex-end;
+}
+
+.box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .box {
+    margin: 15px;
+    padding: 5px;
+  }
+  .container .box h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,62 @@
+body {
+    font-family: "Dosis",sans-serif;
+
+  }
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .info{
+    display: flex;
+  }
+  .info label{
+    width: 150px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  .bill{
+    display: flex;
+    padding-top:20px; 
+  }
+  .bill label{
+    width: 150px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  .btn-payment{
+    padding-top: 15px; 
+    display: flex;
+  }
+  input[type="submit"]{
+    background-color: #009688;
+    width: 50%;
+    height: 30px;
+    font-weight: bold;
+    font-size: small;
+    color: cornsilk;
+  }
+  input[type="number"]{
+    height: 20px;
+  }
+  input[type="number"]:hover{
+    background-color: #585f8645;
+  }
+  .not-yet{
+    font-weight: bold;
+    font-size: medium;
+    margin: 20px 40px 0 40px;
+
+  }
+  button{
+    background-color:#d60000;
+    width: 50%;
+    height: 30px;
+    font-weight: bold;
+    font-size: small;
+    color: cornsilk;
+  }
+  .picture > #logo{
+    padding: 0 40px;
+  }
