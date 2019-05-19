@@ -17,9 +17,9 @@ if (isset($_GET['sync'])) {
 
     case 'sync-trans':
       $get = $branch -> getAllTrans();
-      $brn = 2;
       foreach ($get as $key =>$value) {
-        $brnch = $brn;
+        $brnch = $center -> getBranch($value['emp_id']);
+        $brn = $brnch['branch'];
         $trs_code = $value['transaction_code'];
         $emp_id = $value['emp_id'];
         $customer_code = $value['customer_phone'];

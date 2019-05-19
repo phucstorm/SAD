@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2019 at 10:01 AM
+-- Generation Time: May 19, 2019 at 06:16 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -45,8 +45,8 @@ INSERT INTO `customer` (`id`, `full_name`, `phone_number`, `dob`, `address`, `po
 (1, 'Storm', 113, '2019-04-09', 'Secret', 16),
 (2, 'Linh', 114, '2019-05-23', 'Gò Vấp', 126),
 (11, 'Phát', 115, '2019-04-25', 'Thanh Đa', 344),
-(12, 'Như', 116, '2019-04-23', 'Quận 1', 0),
-(18, 'Phụng', 117, '2019-04-30', 'Tân Bình', 0),
+(12, 'Như', 116, '2019-04-23', 'Quận 1', 270),
+(18, 'Phụng', 117, '2019-04-30', 'Tân Bình', 6),
 (19, 'Tài Lanh Chanh', 118, '2019-05-28', 'Thủ Đức', 0);
 
 --
@@ -67,7 +67,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

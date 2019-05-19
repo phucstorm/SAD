@@ -94,7 +94,13 @@ class Center{
     $trs = $this->stmt->fetchAll();
     return count($trs)==0 ? false : $trs;
   }
-  
+  function getBranch($emp_id){
+   $this->stmt = $this->link->prepare("SELECT `branch` FROM `employees` WHERE `id`=?");
+    $cond = [$emp_id];
+    $this->stmt->execute($cond);
+    $brn = $this->stmt->fetchAll();
+   return count($brn)==0 ? false : $brn[0];
+  }
 
 }
 ?>

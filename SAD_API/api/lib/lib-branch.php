@@ -79,9 +79,5 @@ class Branch{
   function createTrans($emp_id, $phone, $total_price){
     return $this->query("INSERT INTO `transactions` (`emp_id`,`customer_phone`,`total_price`) VALUES (?,?,?)", [$emp_id, $phone,$total_price]);
   }
-
-  function createDetail($product_code, $quantity, $price){
-    return $this->query("INSERT INTO `transaction_detail` (`product_code`,`quantity`,`price`) VALUES (?,?,?)", [$product_code, $quantity, $price]);
-  }
 }
 ?>

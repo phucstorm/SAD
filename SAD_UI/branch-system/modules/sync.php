@@ -4,6 +4,7 @@
     echo "<script>alert('Đăng nhập lại');location.href='../'</script>";
   }else{
   	$_GET['sync'] = "sync-trans";
+    $_GET['id'] =  $_SESSION['id'];
     $_GET['type'] = $_SESSION['type'];
     $url = "http://localhost/api/v1/synchronized/sync.php?sync=".isset($_GET['sync'])."&sync=".$_GET['sync']."";
     $client = curl_init($url);

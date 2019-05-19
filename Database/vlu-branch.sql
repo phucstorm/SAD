@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2019 at 10:01 AM
+-- Generation Time: May 19, 2019 at 06:15 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -3821,7 +3821,9 @@ INSERT INTO `transactions` (`id`, `transaction_code`, `emp_id`, `customer_phone`
 (3596, 'VLS3596', 3, 118, 307000, '2019-05-17 07:42:20'),
 (3597, 'VLS3597', 3, 114, 84000, '2019-05-17 07:42:20'),
 (3598, 'VLS3598', 3, 114, 329000, '2019-05-17 07:42:20'),
-(3599, 'VLS3599', 3, 116, 494000, '2019-05-17 07:42:20');
+(3599, 'VLS3599', 3, 116, 494000, '2019-05-17 07:42:20'),
+(3600, 'VLS3600', 8, 116, 270000, '2019-05-19 03:12:08'),
+(3601, 'VLS3601', 8, 117, 6000, '2019-05-19 03:56:12');
 
 --
 -- Indexes for dumped tables
@@ -3852,7 +3854,7 @@ ALTER TABLE `storehouse`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3600;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3602;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
