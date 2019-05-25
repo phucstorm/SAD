@@ -8,7 +8,6 @@ session_start();
         curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
         $response = curl_exec($client);
         $result = json_decode($response);
-        echo $response;
         $_SESSION['token'] = $result->jwt;
         $_SESSION['secret_data'] = json_encode($result->secret_data);
         $_SESSION['name'] = json_encode($result->secret_data->emp_name);

@@ -21,12 +21,17 @@
         $error['product_price'] = "Vui lòng nhập giá sản phẩm";
       }
       if(empty($error)){
-        $edit = "http://localhost/api/v1/center/center.php?token=".isset($_POST['token'])."&product=".$_POST['product']."&product_name=".$_POST['product_name']."&product_code=".$_POST['product_code']."&product_price=".$_POST['product_price']."&id=".$_POST['id']."";
+        $_GET['product'] = "edit";
+        $edit = "http://localhost/api/v1/center/center.php?token=".isset($_POST['token'])."&product=".$_POST['product']."&product_name=".urlencode($_POST['product_name'])."&product_code=".$_POST['product_code']."&product_price=".$_POST['product_price']."&id=".$_POST['id']."";
         $client_edit = curl_init($edit);
         curl_setopt($client_edit,CURLOPT_RETURNTRANSFER,true);
         $response_edit = curl_exec($client_edit);
         $result_edit = json_decode($response_edit);
-        echo "<script>alert('Sửa thông tin sản phẩm thành công');location.href='product.php'</script>";
+        if($response_edit == true){
+          echo "<script>alert('Sửa thông tin sản phẩm thành công');location.href='product.php'</script>";
+        }else{
+          echo "<script>alert('Sửa thông tin sản phẩm không thành công');location.href='product.php'</script>";
+        }
       }
 
     }

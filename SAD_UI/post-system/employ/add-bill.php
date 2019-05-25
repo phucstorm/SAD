@@ -67,7 +67,9 @@
 					<td><?php echo $value['product_price'] ?></td>
 					<td><a href="remove.php?key=<?php echo $key ?>" class="btn btn-xs btn-danger"> <i class="fa fa-remove"></i></a></td>
 				</tr>
-				<?php $sum+= $value['product_price'] * $value['product_sl']; $_SESSION['total'] = $sum;$_SESSION['point'] = $_SESSION['total']/1000; ?>
+				<?php $sum+= $value['product_price'] * $value['product_sl']; 
+				$_SESSION['total'] = $sum;
+				$_SESSION['point'] = $_SESSION['total']/1000; ?>
 				<?php $stt ++;endforeach ?>
 			</tbody>
 		</table>

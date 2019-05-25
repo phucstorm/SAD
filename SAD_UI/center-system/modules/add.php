@@ -4,12 +4,20 @@
   if($_SESSION['token'] == "" && $_SESSION['type'] != 1){
     echo "<script>alert('Đăng nhập lại');location.href='../'</script>";
   }else{
+    $_GET['product'] = "add";
+    $_GET['token'] = $_SESSION['token'];
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $edit = "http://localhost/api/v1/center/center.php?token=".isset($_POST['token'])."&product=".$_POST['product']."&product_name=".$_POST['product_name']."&product_code=".$_POST['product_code']."&product_price=".$_POST['product_price']."";
+        $edit = "http://localhost/api/v1/center/center.php?token=".isset($_GET['token'])."&product=".$_GET['product']."&product_name=".urlencode($_POST['product_name'])."&product_code=".urlencode($_POST['product_code'])."&product_price=".urlencode($_POST['product_price'])."";
+
         $client_edit = curl_init($edit);
         curl_setopt($client_edit,CURLOPT_RETURNTRANSFER,true);
         $response_edit = curl_exec($client_edit);
         $result_edit = json_decode($response_edit);
+        if($response_edit == true){
+          echo "<script>alert('Thêm sản phẩm thành công');location.href='product.php'</script>";
+        }else{
+          echo "<script>alert('Thêm sản phẩm không thành công');location.href='product.php'</script>";
+        }
     }
   }
 ?>

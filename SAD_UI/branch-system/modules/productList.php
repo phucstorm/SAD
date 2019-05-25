@@ -11,7 +11,7 @@
     	$response = curl_exec($client);
     	$result = json_decode($response);
 	}
-    ?> 
+?> 
 
 <?php require_once __DIR__. "/../layout/header.php";?>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">

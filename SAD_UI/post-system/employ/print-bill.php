@@ -15,7 +15,11 @@
       curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
       $response = curl_exec($client);
       $result= json_decode($response);
-      echo "<script>alert('Đã thanh toán hóa đơn');location.href='index.php'</script>";     
+      if($result->status1 == "null"){
+        echo "<script>alert('Đã thanh toán hóa đơn');location.href='index.php'</script>";
+      }else{
+        echo "<script>alert('Chưa có khách hàng này')</script>";
+      }    
     }
 ?>
 <!DOCTYPE html>

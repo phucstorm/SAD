@@ -6,6 +6,8 @@
 	}else{
 		$_GET['token'] = $_SESSION['token'];
         $_GET['read'] = "transaction";
+
+        
 		$url = "http://localhost/api/v1/branch/branch.php?token=".isset($_GET['token'])."&read=".$_GET['read']."";
 		$client = curl_init($url);
     	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -13,9 +15,7 @@
     	$result = json_decode($response);
 
 	}
-
 ?> 
-
 <?php require_once __DIR__. "/../layout/header.php";?>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
@@ -81,7 +81,7 @@
                                     <td><b><?php echo $value->total_price?></b></td>
                                     <td><b><?php echo $value->created_at?></b></td>
                                 </tr>    
-                                    <?php endforeach?>
+                                <?php endforeach?>
                                 
                             </tbody>
                         </table>
